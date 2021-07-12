@@ -19,7 +19,6 @@ export const SearchInput = ({ handleChange }) => {
   const onChange = (e) => {
     setState(e.target.value);
     handleChange(e.target.value);
-    console.log(e.target.value);
   };
 
   return (

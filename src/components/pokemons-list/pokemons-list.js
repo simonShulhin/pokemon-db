@@ -1,4 +1,3 @@
-import PokeApiService from '../../services/pokeapi-service';
 import React, { useEffect, useState } from 'react';
 import { PokemonsListItem } from '../pokemons-list-item';
 import './pokemons-list.scss';

@@ -6,7 +6,7 @@ export default class PokeApiService {
     const res = await fetch(`${this._apiBase}${url}`);
 
     if (!res.ok) {
-      throw new Error(`Could not fetch ${url}` + `, received ${res.status}`);
+      throw new Error(`Could not fetch ${url} , received ${res.status}`);
     }
     return await res.json();
   };
@@ -20,11 +20,6 @@ export default class PokeApiService {
     const person = await this.getResource(`pokemon/${name}/`);
     
     return this._transformPokemon(person);
-  };
-
-  getAbilities = async (url) => {
-    const res = await this.getResource(`ability/${url}`);
-    return res;
   };
 
   _transformPokemon = ({ name, types, sprites, id, height, weight }) => {

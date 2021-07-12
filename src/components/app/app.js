@@ -1,14 +1,12 @@
 import './app.css';
-import { Route, Switch } from 'react-router';
-import { HomePage, CartPage } from '../pages';
-import PokeApiService from '../../services/pokeapi-service';
-import React, { useEffect, useState } from 'react';
-import { SelectQuantity } from '../select-quantity';
+import { HomePage } from '../pages';
+import React from 'react';
+import Header from '../header/header';
 
 export const App = () => {
   return (
     <main role='main' className='container'>
-     
+      <Header />
       <HomePage />
     </main>
   );

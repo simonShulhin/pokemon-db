@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './pokemons-list-item.scss';
-import PokeApiService from '../../services/pokeapi-service';
-import { Spinner } from '../spinner';
 
 export const PokemonsListItem = ({ pokemon }) => {
   const types = pokemon.types
@@ -15,7 +13,7 @@ export const PokemonsListItem = ({ pokemon }) => {
   return (
     <div className='pokemons-list-item'>
       <div className='card shadow-sm'>
-        <img className='sprite' src={pokemon.sprite}></img>
+        <img className='sprite' src={pokemon.sprite} alt={pokemon.name}></img>
 
         <div className='card-body'>
           <h4 className='order'>#{pokemon.id}</h4>
